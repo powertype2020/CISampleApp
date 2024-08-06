@@ -17,15 +17,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: xcodebuild \
-            -project CITest.xcodeproj \
+      run: xcodebuild -project CITest.xcodeproj \
             -scheme CITest \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
             clean build
     - name: Run tests
-      run: xcodebuild \
-            -project CITest.xcodeproj \
+      run: xcodebuild -project CITest.xcodeproj \
             -scheme CITest \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
