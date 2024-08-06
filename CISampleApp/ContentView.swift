@@ -14,13 +14,6 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-            Button(
-                action: {
-                fatalError()
-            }, label: {
-                Text("強制クラッシュ")
-            }
-            )
         }
         .padding()
     }
